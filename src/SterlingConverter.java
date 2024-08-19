@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class SterlingConverter implements Converter{
+public class SterlingConverter implements CurrencyConverter {
     public SterlingConverter(){
 
     }

@@ -1,4 +1,4 @@
-public class DollarConverter implements Converter{
+public class DollarConverter implements CurrencyConverter {
 
     public DollarConverter(){
 

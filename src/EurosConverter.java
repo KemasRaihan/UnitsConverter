@@ -1,4 +1,4 @@
-public class EurosConverter implements Converter{
+public class EurosConverter implements CurrencyConverter {
     public EurosConverter(){
     }
 

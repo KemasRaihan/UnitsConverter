@@ -1,2 +1,2 @@
 # UnitsConverter
-Application that converts currencies, distance temperature, and weight units.
+Application that converts currency, distance temperature, and weight units.

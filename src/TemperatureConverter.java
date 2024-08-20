@@ -1,5 +1,5 @@
 public interface TemperatureConverter {
-    public double convertToCelsius(double amount);
-    public double convertToFahrenheit(double amount);
-    public double convertToKelvin(double amount);
+    public float convertToCelsius(float amount);
+    public float convertToFahrenheit(float amount);
+    public float convertToKelvin(float amount);
 }

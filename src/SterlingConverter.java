@@ -4,19 +4,19 @@ public class SterlingConverter implements CurrencyConverter {
     }
 
     @Override
-    public double convertToDollars(double amount){
-        return amount * 1.28;
+    public float convertToDollars(float amount){
+        return amount * 1.28f;
 
     }
 
     @Override
-    public double convertToSterling(double amount){
+    public float convertToSterling(float amount){
         return amount;
     }
 
     @Override
-    public double convertToEuros(double amount){
-        return amount * 1.16;
+    public float convertToEuros(float amount){
+        return amount * 1.16f;
     }
 
 }

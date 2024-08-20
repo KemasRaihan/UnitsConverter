@@ -54,9 +54,9 @@ public class CurrencyConverterManager {
     public static void convertDollarsToSterling(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToSterling(amount);
+        float newAmount = converter.convertToSterling(amount);
         System.out.println("$" + amount + " is £" + newAmount);
 
     }
@@ -64,18 +64,18 @@ public class CurrencyConverterManager {
     public static void convertDollarsToEuros(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToEuros(amount);
+        float newAmount = converter.convertToEuros(amount);
         System.out.println("$" + amount + " is €" + newAmount);
 
     }
     public static void convertSterlingToDollars(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in sterling): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToDollars(amount);
+        float newAmount = converter.convertToDollars(amount);
         System.out.println("£" + amount + " is $" + newAmount);
 
     }
@@ -83,9 +83,9 @@ public class CurrencyConverterManager {
     public static void convertSterlingToEuros(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToEuros(amount);
+        float newAmount = converter.convertToEuros(amount);
         System.out.println("$" + amount + " is €" + newAmount);
 
     }
@@ -93,9 +93,9 @@ public class CurrencyConverterManager {
     public static void convertEurosToDollars(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in euros): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToDollars(amount);
+        float newAmount = converter.convertToDollars(amount);
         System.out.println("€" + amount + " is $" + newAmount);
 
     }
@@ -103,9 +103,9 @@ public class CurrencyConverterManager {
     public static void convertEurosToSterling(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in euros): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToSterling(amount);
+        float newAmount = converter.convertToSterling(amount);
         System.out.println("€" + amount + " is £" + newAmount);
 
     }

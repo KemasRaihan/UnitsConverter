@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TemperatureConverterManager {
-    public static void CurrencyConverterMenu(){
+    public static void Menu(){
         String option;
         do {
             Scanner input = new Scanner(System.in);
@@ -17,28 +17,28 @@ public class TemperatureConverterManager {
             System.out.println("0. To Quit");
             System.out.print("Select an option: ");
 
-            CurrencyConverter converter = null;
+            TemperatureConverter converter = null;
 
             option = input.next();
 
             switch (option) {
                 case "1":
-                    convertDollarsToSterling(input, converter = new DollarConverter());
+                    convertCelsiusToFahrenheit(input, converter = new CelsiusConverter());
                     break;
                 case "2":
-                    convertDollarsToEuros(input, converter = new DollarConverter());
+                    convertCelsiusToKelvin(input, converter = new CelsiusConverter());
                     break;
                 case "3":
-                    convertSterlingToDollars(input, converter = new SterlingConverter());
+                    //convertSterlingToDollars(input, converter = new SterlingConverter());
                     break;
                 case "4":
-                    convertSterlingToEuros(input, converter = new SterlingConverter());
+                    //convertSterlingToEuros(input, converter = new SterlingConverter());
                     break;
                 case "5":
-                    convertEurosToDollars(input, converter = new EurosConverter());
+                    //convertEurosToDollars(input, converter = new EurosConverter());
                     break;
                 case "6":
-                    convertEurosToSterling(input, converter = new EurosConverter());
+                    //convertEurosToSterling(input, converter = new EurosConverter());
                     break;
                 case "0":
                     break;
@@ -51,31 +51,31 @@ public class TemperatureConverterManager {
 
     }
 
-    public static void convertDollarsToSterling(Scanner input, CurrencyConverter converter){
+    public static void convertCelsiusToFahrenheit(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        System.out.print("Enter the amount (in Celsius °C): ");
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToSterling(amount);
-        System.out.println("$" + amount + " is £" + newAmount);
+        float newAmount = converter.convertToFahrenheit(amount);
+        System.out.println(amount + "°C" + " is " + newAmount + "°F");
 
     }
 
-    public static void convertDollarsToEuros(Scanner input, CurrencyConverter converter){
+    public static void convertCelsiusToKelvin(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        System.out.print("Enter the amount (in Celsius °C): ");
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToEuros(amount);
-        System.out.println("$" + amount + " is €" + newAmount);
+        float newAmount = converter.convertToKelvin(amount);
+        System.out.println(amount + "°C" + " is " + newAmount + "°F");
 
     }
     public static void convertSterlingToDollars(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in sterling): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToDollars(amount);
+        float newAmount = converter.convertToDollars(amount);
         System.out.println("£" + amount + " is $" + newAmount);
 
     }
@@ -83,9 +83,9 @@ public class TemperatureConverterManager {
     public static void convertSterlingToEuros(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in dollars): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToEuros(amount);
+        float newAmount = converter.convertToEuros(amount);
         System.out.println("$" + amount + " is €" + newAmount);
 
     }
@@ -93,9 +93,9 @@ public class TemperatureConverterManager {
     public static void convertEurosToDollars(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in euros): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToDollars(amount);
+        float newAmount = converter.convertToDollars(amount);
         System.out.println("€" + amount + " is $" + newAmount);
 
     }
@@ -103,9 +103,9 @@ public class TemperatureConverterManager {
     public static void convertEurosToSterling(Scanner input, CurrencyConverter converter){
         // Prompt user to enter the amount
         System.out.print("Enter the amount (in euros): ");
-        double amount = input.nextDouble();
+        float amount = input.nextFloat();
 
-        double newAmount = converter.convertToSterling(amount);
+        float newAmount = converter.convertToSterling(amount);
         System.out.println("€" + amount + " is £" + newAmount);
 
     }

@@ -3,17 +3,17 @@ public class EurosConverter implements CurrencyConverter {
     }
 
     @Override
-    public double convertToDollars(double amount){
-        return amount * 1.09;
+    public float convertToDollars(float amount){
+        return amount * 1.09f;
     }
 
     @Override
-    public double convertToSterling(double amount){
-        return amount * 0.86;
+    public float convertToSterling(float amount){
+        return amount * 0.86f;
     }
 
     @Override
-    public double convertToEuros(double amount){
+    public float convertToEuros(float amount){
         return amount;
     }
 

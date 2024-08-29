@@ -1,6 +1,6 @@
 public class FahrenheitConverter implements TemperatureConverter{
     public FahrenheitConverter(){}
-    public double convertToCelsius(double amount){return (amount-32) * (5/9) ;}
-    public double convertToFahrenheit(double amount){return amount; }
-    public double convertToKelvin(double amount){return (convertToCelsius(amount) + 273.15);}
+    public float convertToCelsius(float amount){return (amount-32f) * (5f/9f) ;}
+    public float convertToFahrenheit(float amount){return amount; }
+    public float convertToKelvin(float amount){return (convertToCelsius(amount) + 273.15f);}
 }

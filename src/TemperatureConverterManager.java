@@ -29,16 +29,16 @@ public class TemperatureConverterManager {
                     convertCelsiusToKelvin(input, converter = new CelsiusConverter());
                     break;
                 case "3":
-                    //convertSterlingToDollars(input, converter = new SterlingConverter());
+                    convertFahrenheitToCelsius(input, converter = new FahrenheitConverter());
                     break;
                 case "4":
-                    //convertSterlingToEuros(input, converter = new SterlingConverter());
+                    convertFahrenheitToKelvin(input, converter = new FahrenheitConverter());
                     break;
                 case "5":
-                    //convertEurosToDollars(input, converter = new EurosConverter());
+                    convertKelvinToCelsius(input, converter = new KelvinConverter());
                     break;
                 case "6":
-                    //convertEurosToSterling(input, converter = new EurosConverter());
+                    convertKelvinToFahrenheit(input, converter = new KelvinConverter());
                     break;
                 case "0":
                     break;
@@ -70,43 +70,43 @@ public class TemperatureConverterManager {
         System.out.println(amount + "°C" + " is " + newAmount + "°F");
 
     }
-    public static void convertSterlingToDollars(Scanner input, CurrencyConverter converter){
+    public static void convertFahrenheitToCelsius(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in sterling): ");
+        System.out.print("Enter the amount (in Fahrenheit °F): ");
         float amount = input.nextFloat();
 
-        float newAmount = converter.convertToDollars(amount);
-        System.out.println("£" + amount + " is $" + newAmount);
+        float newAmount = converter.convertToCelsius(amount);
+        System.out.println(amount + "°F" + " is " + newAmount + "°C");
 
     }
 
-    public static void convertSterlingToEuros(Scanner input, CurrencyConverter converter){
+    public static void convertFahrenheitToKelvin(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in dollars): ");
+        System.out.print("Enter the amount (in Fahrenheit °F): ");
         float amount = input.nextFloat();
 
-        float newAmount = converter.convertToEuros(amount);
-        System.out.println("$" + amount + " is €" + newAmount);
+        float newAmount = converter.convertToKelvin(amount);
+        System.out.println(amount + "°F" + " is " + newAmount + "°C");
 
     }
 
-    public static void convertEurosToDollars(Scanner input, CurrencyConverter converter){
+    public static void convertKelvinToCelsius(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in euros): ");
+        System.out.print("Enter the amount (in Kelvin): ");
         float amount = input.nextFloat();
 
-        float newAmount = converter.convertToDollars(amount);
-        System.out.println("€" + amount + " is $" + newAmount);
+        float newAmount = converter.convertToCelsius(amount);
+        System.out.println(amount + "K" + " is " + newAmount + "°C");
 
     }
 
-    public static void convertEurosToSterling(Scanner input, CurrencyConverter converter){
+    public static void convertKelvinToFahrenheit(Scanner input, TemperatureConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in euros): ");
+        System.out.print("Enter the amount (in Kelvin): ");
         float amount = input.nextFloat();
 
-        float newAmount = converter.convertToSterling(amount);
-        System.out.println("€" + amount + " is £" + newAmount);
+        float newAmount = converter.convertToFahrenheit(amount);
+        System.out.println(amount + "K" + " is " + newAmount + "°F");
 
     }
 }

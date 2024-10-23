@@ -8,8 +8,8 @@ public class WeightConverterManager {
             System.out.println("-------------------");
             System.out.println("Weight Converter");
             System.out.println("-------------------");
-            System.out.println("1. Grams (g) To Milligrams (mg)");
-            System.out.println("2. Grams (g) To Kilograms (kg)");
+            System.out.println("1. Grams (g) To Kilograms (kg)");
+            System.out.println("2. Grams (g) To Milligrams (mg)");
             System.out.println("3. Grams (g) To Pounds (lb)");
             System.out.println("4. Milligrams (mg) To Grams (g)");
             System.out.println("5. Milligrams (mg) To Kilograms (kg)");
@@ -18,8 +18,8 @@ public class WeightConverterManager {
             System.out.println("8. Kilograms (kg) To Milligrams (mg)");
             System.out.println("9. Kilograms (kg) To Pounds (lb)");
             System.out.println("10. Pounds (lb) To Grams (g)");
-            System.out.println("11. Pounds (lb) To Milligrams (mg)");
-            System.out.println("12. Pounds (lb) To Kilograms (kg)");
+            System.out.println("11. Pounds (lb) To Kilograms (kg)");
+            System.out.println("12. Pounds (lb) To Milligrams (mg)");
             System.out.println("0. To Quit");
             System.out.print("Select an option: ");
 
@@ -29,10 +29,10 @@ public class WeightConverterManager {
 
             switch (option) {
                 case "1":
-                    convertGramsToMilligrams(input, converter = new GramsConverter());
+                    convertGramsToKilograms(input, converter = new GramsConverter());
                     break;
                 case "2":
-                    convertGramsToKilograms(input, converter = new GramsConverter());
+                    convertGramsToMilligrams(input, converter = new GramsConverter());
                     break;
                 case "3":
                     convertGramsToPounds(input, converter = new GramsConverter());
@@ -41,28 +41,28 @@ public class WeightConverterManager {
                     convertMilligramsToGrams(input, converter = new MilligramsConverter());
                     break;
                 case "5":
-                    convertMilligramsToKilograms(input, converter = new KilogramsConverter());
+                    convertMilligramsToKilograms(input, converter = new MilligramsConverter());
                     break;
                 case "6":
-                    //convertKelvinToFahrenheit(input, converter = new KelvinConverter());
+                    convertMilligramsToPounds(input, converter = new MilligramsConverter());
                     break;
                 case "7":
-                    //convertFahrenheitToKelvin(input, converter = new FahrenheitConverter());
+                    convertKilogramsToGrams(input, converter = new KilogramsConverter());
                     break;
                 case "8":
-                    //convertKelvinToCelsius(input, converter = new KelvinConverter());
+                    convertKilogramsToMilligrams(input, converter = new KilogramsConverter());
                     break;
                 case "9":
-                    //convertKelvinToFahrenheit(input, converter = new KelvinConverter());
+                    convertKilogramsToPounds(input, converter = new KilogramsConverter());
                     break;
                 case "10":
-                    //convertFahrenheitToKelvin(input, converter = new FahrenheitConverter());
+                    convertPoundsToGrams(input, converter = new PoundsConverter());
                     break;
                 case "11":
-                    //convertKelvinToCelsius(input, converter = new KelvinConverter());
+                    convertPoundsToKilograms(input, converter = new PoundsConverter());
                     break;
                 case "12":
-                    //convertKelvinToFahrenheit(input, converter = new KelvinConverter());
+                    convertPoundsToMilligrams(input, converter = new PoundsConverter());
                     break;
                 case "0":
                     break;
@@ -156,11 +156,11 @@ public class WeightConverterManager {
 
     public static void convertKilogramsToPounds(Scanner input, WeightConverter converter){
         // Prompt user to enter the amount
-        System.out.print("Enter the amount (in milligrams (mg)): ");
+        System.out.print("Enter the amount (in kilograms (kg)): ");
         float amount = input.nextFloat();
 
         float newAmount = converter.convertToPounds(amount);
-        System.out.println(amount + "mg" + " is " + newAmount + "lbs");
+        System.out.println(amount + "kg" + " is " + newAmount + "lbs");
 
     }
 
